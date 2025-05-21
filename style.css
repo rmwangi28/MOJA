@@ -1,0 +1,407 @@
+html,body {
+      position: relative;
+      height: 100%;
+       overflow-x: hidden;  /* x position hidden on browser*/
+    }
+    
+    .header{
+        padding: 30px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container{
+        font-family: Garamond, serif;
+        font-size: 16.5px;
+        text-align: center;
+        background-color: rgb(29, 27, 27);
+        color: rgb(255, 255, 255);
+        width: 100%;
+        padding-bottom: .5em;
+        padding-top:.5em;
+        margin: auto;
+        letter-spacing: normal;
+        background-image: url(./images/African-Pattern.jpg);
+        opacity: 100%;
+    
+    }
+    h1 {
+        font-family: 'Tilt Prism', cursive;
+        font-style: normal;
+        text-align: center;
+        font-size: 50px; /* Adjust size to a more reasonable number */
+        color: black;
+        padding: 5px;
+        margin: auto;
+        
+    }
+    #navbar {
+        width: 100%;
+        padding: 20px; /* Reduced padding */
+        background: rgb(2, 2, 2);
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        position: sticky;
+    }
+    #navbar ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    #navbar a {
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px; /* Slightly smaller font size */
+        font-weight: 500;
+        margin-left: 20px; /* Reduced margin */
+        padding: 10px 15px;
+        font-family: "SUSE", sans-serif;
+        justify-content: space-around;
+    }
+    
+    #navbar li {
+        list-style: none;
+        margin: 0 15px;
+    }
+    
+    #navbar li a::before {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0; /* Position the line at the bottom of the link */
+        left: 0;
+        width: 0%; /* Start with the line hidden */
+        height: 2px;
+        background: #ffff; /* White color for the hover underline */
+        transition: width 0.3s ease-in-out; 
+    }    
+    
+    #navbar a:hover::before {
+        width: 100%; /* Expand the line on hover */
+    }
+    
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 90%;
+      border-radius: 10px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 1000%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .swiper-button-next{
+        position: absolute;
+        top: 80%;
+        right: 10px;
+        z-index: 1;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .swiper-button-prev{
+        position: absolute;
+        top: 80%;
+        left: 10px;
+        z-index: 1;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .article{
+        background-color: #fff;
+    }
+     /*animated fade out*/
+    h2{
+      font-size: 5em;
+      font-family:"SUSE",sans-serif;
+      font-style:normal;
+      font-optical-sizing: auto;
+      text-align: center;
+      color: transparent;
+      -webkid-text-stroke-color: 10px rgba(7,6,6,1);
+      position:relative;
+    }
+    h2:before{
+      content:"A Journey Through Culture, Wildlife and Adventure";
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      overflow: hidden;
+      color: black;
+      border-right: 5px solid rgba(183,18,18);
+      transition: 1s ease-in-out;
+
+    }
+    h2:hover:before{
+      width: 100%;
+      filter: drop-shadow(0 1 30px black);
+    }
+    .grid-container{
+        position: relative;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Two columns for a simple layout */
+        padding: 19px;
+        margin-left: 50px;
+        gap: 10px;
+
+       
+    }
+    .card-1, .card-2, .card-3, .card-4, .card-5, .card-6{
+        top:0;
+        width: 270px;
+        height:246px;
+        padding: 20px 20px;
+        position: relative;
+        box-sizing: content-box;
+        border-radius: 20px;
+        border: 1px solid rgb(84 90 106);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(236, 230, 215, 0.84);
+        transition: box-shadow 0.4s ease;
+       
+        
+       
+    }
+    .card-1:hover,.card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
+        box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+    }
+    .card-1 p, .card-2 p, .card-3 p, .card-4 p, .card-5 p, .card-6 p {
+        font-size: 11px;
+        margin: 0;
+        padding: 1px;
+        line-height: 1.5;
+        font-family: "Geist Mono", monospace;
+        font-weight: 100;
+    }
+    /*styles for the card element and p tags*/
+    h3{ 
+        font-size: 20px;
+        font-weight: 600;
+        margin: 5px auto;
+        padding: 20px;
+        line-height: 1.2;
+        font-family: "SUSE", sans-serif;
+        margin-bottom: 30px 20px 10px;
+        
+    }
+    h4{
+      font-size: 7em;
+      font-weight: 600;
+      font-family: "SUSE", sans-serif;
+      text-align: center;
+      margin: auto;
+      background: linear-gradient(to right, #ba0100, #006600 );
+      background-clip: text;
+      -webkit-background-clip: text;
+       color: transparent;
+    }
+/* Wrapper for the flex layout */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* grid-template-rows:  auto 10% auto; */
+    gap: 20px; 
+    /* grid-gap: 0px; */
+    padding: 40px 10px 10px;
+    margin: auto;
+    top: 0%;
+    bottom: 10%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* General styling for gallery items */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    justify-content: stretch;
+    display: inline-block;
+ 
+  }
+  
+  /* Image container styling */
+  .gallery-item .image {
+    width: 500px;
+    height: auto;
+    display: block;
+   
+  }
+  
+  /* Image styling and hover effect */
+  .gallery-item .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    cursor: pointer;
+     transition: transform 0.5s ease-in-out; 
+  } 
+  
+  .gallery-item:hover .image img {
+    transform: scale(1.1);
+  } 
+  
+  /* Text overlay styling */
+  .gallery-item .text {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #060606;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    font-family: "SUSE", sans-serif;
+  }
+  /* button .text styling */
+  .button, .text{
+    background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 33px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  }
+  .button:hover{
+    border-color: #dadce0;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+  
+  }
+ .button:focus{
+   border-color: #4285f4;
+  outline: none;
+ }
+  /* Hover effect for text overlay */
+  .gallery-item:hover .text {
+    opacity: 1;
+    animation: move-down 0.3s linear;
+  }
+  .clickable-image{
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  /* Modal styling */
+  .modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+.col-col-2{
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+}
+.box{
+  border: black;
+}
+.book{
+  position: relative;
+  width: 300px;
+  height:400px;
+  perspective: 1000px;
+}
+.cover, .page{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+/* title for the header in the book */
+#title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #0c0c0c;
+  font-family: "SUSE", sans-serif;
+}
+
+  /* Animation for text movement */
+  @keyframes move-down {
+    0% {
+      top: 30%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+ 
+
+    /* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #000;
+        transition: left 0.3s ease;
+    }
+    .grid-container{
+      grid-template-columns: 1fr;
+      height: 50%
+    }
+   .h2{
+    transition: none !important;
+    font-size: 10px;
+   }
+}
+ 
