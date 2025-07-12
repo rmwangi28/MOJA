@@ -1,0 +1,230 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+       .header{
+        padding: 30px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+      .container{
+        font-family: Garamond, serif;
+        font-size: 16.5px;
+        text-align: center;
+        background-color: rgb(29, 27, 27);
+        color: rgb(255, 255, 255);
+        width: 100%;
+        padding-bottom: .5em;
+        padding-top:.5em;
+        margin: auto;
+        letter-spacing: normal;
+        background-image: url(./images/African-Pattern.jpg);
+        opacity: 100%;
+    
+    }
+     h1 {
+        font-family: 'Tilt Prism', cursive;
+        font-style: normal;
+        text-align: center;
+        font-size: 50px; /* Adjust size to a more reasonable number */
+        color: black;
+        padding: 5px;
+        margin: auto;
+        
+    }
+        #navbar {
+        width: 100%;
+        padding: 20px; /* Reduced padding */
+        background: rgb(2, 2, 2);
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        position: sticky;
+    }
+    #navbar ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    #navbar a {
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px; /* Slightly smaller font size */
+        font-weight: 500;
+        margin-left: 20px; /* Reduced margin */
+        padding: 10px 15px;
+        font-family: "SUSE", sans-serif;
+        justify-content: space-around;
+    }
+    
+    #navbar li {
+        list-style: none;
+        margin: 0 15px;
+    }
+    
+    #navbar li a::before {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0; /* Position the line at the bottom of the link */
+        left: 0;
+        width: 0%; /* Start with the line hidden */
+        height: 2px;
+        background: #ffff; /* White color for the hover underline */
+        transition: width 0.4s ease-in-out; 
+    }    
+    
+    #navbar a:hover::before {
+        width: 100%; /* Expand the line on hover */
+    }
+
+
+/* styling of the book */
+.book {
+  position: absolute; 
+  width: 100vw; 
+   height: calc(100vh - 100px); 
+  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  /* will-change: transform; */
+  transform-style: preserve-3d;
+}
+img {
+
+    max-width: 130%;
+    max-height: 130%;
+    object-fit: contain;
+    /* display: block; */
+    transform: scale(1.2);
+    
+}
+.page,
+.front-cover,
+.back-cover {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front-cover {
+  position: relative;
+}
+.page{
+  top: 0;
+  left: 0;
+   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left;
+    transition: transform 2s ease;
+}
+.page.flipped {
+     transform: rotateY(-180deg);
+       z-index: 0;  /* push flipped pages behind */
+}
+
+/* Each page is layered to be on top of each other */
+#front-cover{ z-index: 14;}
+#Contents   { z-index: 13;}
+#page1      { z-index: 12}
+#page3      { z-index: 10;}
+#page4      { z-index: 9;}
+#page5      { z-index: 8;}
+#page2      { z-index: 11;}
+#page6     { z-index: 7; }
+#page7     { z-index: 6; }
+#page8     { z-index: 5; }
+#page9     { z-index: 4; }
+#page10    { z-index: 3; }
+#page11    { z-index: 2; }
+#page12    { z-index: 1; }
+
+
+.back-cover  { z-index: 0; }
+
+/* .button{
+ align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+} */
+ /* .button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+} */
+/* .button:hover:after {
+  transform: translate(0, 0);
+}
+
+.button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+} */
+
+
+
+#refreshBtn:hover {
+  
+  background: #e3e3e3;
+  transform: scale(1.05);
+}
+
+.footer{
+  margin-bottom: 1000px;
+  padding: 20px;
+}

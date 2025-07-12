@@ -1,3 +1,6 @@
+
+
+//swiper initialization
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 25,
     centeredSlides: true,
@@ -14,6 +17,5 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
-
 
 

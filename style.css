@@ -218,11 +218,12 @@ html,body {
         
     }
     h4{
-      font-size: 7em;
+      font-size: 4em;
       font-weight: 600;
       font-family: "SUSE", sans-serif;
       text-align: center;
-      margin: auto;
+      margin: 10px;
+      padding: 37px;
       background: linear-gradient(to right, #ba0100, #006600 );
       background-clip: text;
       -webkit-background-clip: text;
@@ -237,11 +238,11 @@ html,body {
     /* grid-template-rows:  auto 10% auto; */
     gap: 20px; 
     /* grid-gap: 0px; */
-    padding: 40px 10px 10px;
+    padding: 50px 50px 50px;
     margin: auto;
     top: 0%;
     bottom: 10%;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
   }
   
   /* General styling for gallery items */
@@ -255,8 +256,8 @@ html,body {
   
   /* Image container styling */
   .gallery-item .image {
-    width: 500px;
-    height: auto;
+    width: 400px;
+    height: 400px;
     display: block;
    
   }
@@ -270,7 +271,7 @@ html,body {
     cursor: pointer;
      transition: transform 0.5s ease-in-out; 
   } 
-  
+  /* hover styling when you hover on picture */
   .gallery-item:hover .image img {
     transform: scale(1.1);
   } 
@@ -291,11 +292,11 @@ html,body {
   /* button .text styling */
   .button, .text{
     background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
+  border: 1px solid #3c80c3;
+  /* border-radius: 4px; */
   color: #3c4043;
   cursor: pointer;
-  font-family: arial,sans-serif;
+  font-family: "SUSE", sans-serif;
   font-size: 14px;
   height: 36px;
   line-height: 33px;
@@ -322,16 +323,11 @@ html,body {
     opacity: 1;
     animation: move-down 0.3s linear;
   }
-  .clickable-image{
-    border-radius: 8px;
-    cursor: pointer;
-  }
   /* Modal styling */
-  .modal{
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -339,7 +335,33 @@ html,body {
     overflow: auto;
     background-color: #fff;
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
   }
+/* design for the modal */
+.modal-content{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+  
+}
+/* modal appearance */
+.close-button{
+  float: center;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: red;
+}
+.close-button:hover{
+  background-color: #3c4043;
+}
 
 .col-col-2{
   width: 100%;
