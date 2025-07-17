@@ -1,5 +1,3 @@
-
-
 //swiper initialization
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 25,

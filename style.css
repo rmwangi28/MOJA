@@ -10,21 +10,26 @@ html,body {
         justify-content: space-between;
         align-items: center;
     }
-    .container{
-        font-family: Garamond, serif;
-        font-size: 16.5px;
-        text-align: center;
-        background-color: rgb(29, 27, 27);
-        color: rgb(255, 255, 255);
+    .banner{
+      color: white;
         width: 100%;
-        padding-bottom: .5em;
-        padding-top:.5em;
-        margin: auto;
-        letter-spacing: normal;
-        background-image: url(./images/African-Pattern.jpg);
-        opacity: 100%;
-    
-    }
+        padding: 10px;
+        background: linear-gradient(270deg, #922529, #004600, #ffffff, #000000);
+        background-size: 800% 800%;
+        animation: gradientShift 10s ease infinite;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        position: sticky;
+        top: 0;
+}
+    /* Gradient animation keyframes */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
     h1 {
         font-family: 'Tilt Prism', cursive;
         font-style: normal;
@@ -37,7 +42,7 @@ html,body {
     }
     #navbar {
         width: 100%;
-        padding: 20px; /* Reduced padding */
+        padding: 30px; /* Reduced padding */
         background: rgb(2, 2, 2);
         display: flex;
         justify-content: space-evenly;
@@ -83,7 +88,7 @@ html,body {
         width: 100%; /* Expand the line on hover */
     }
     
-    body {
+  .body {
       background: #eee;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
@@ -91,7 +96,6 @@ html,body {
       margin: 0;
       padding: 0;
     }
-
     .swiper {
       width: 100%;
       height: 90%;
@@ -107,7 +111,6 @@ html,body {
       align-items: center;
       box-sizing: border-box;
     }
-
     .swiper-slide img {
       display: block;
       width: 1000%;
@@ -135,6 +138,8 @@ html,body {
     }
     .article{
         background-color: #fff;
+        margin-left: 50px;
+
     }
      /*animated fade out*/
     h2{
@@ -177,9 +182,9 @@ html,body {
     }
     .card-1, .card-2, .card-3, .card-4, .card-5, .card-6{
         top:0;
-        width: 270px;
-        height:246px;
-        padding: 20px 20px;
+        width: 230px;
+        height:210px;
+        padding: 16px 16px;
         position: relative;
         box-sizing: content-box;
         border-radius: 20px;
@@ -218,7 +223,7 @@ html,body {
         
     }
     h4{
-      font-size: 4em;
+      font-size: 5em;
       font-weight: 600;
       font-family: "SUSE", sans-serif;
       text-align: center;
@@ -229,170 +234,13 @@ html,body {
       -webkit-background-clip: text;
        color: transparent;
     }
-/* Wrapper for the flex layout */
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    /* grid-template-rows:  auto 10% auto; */
-    gap: 20px; 
-    /* grid-gap: 0px; */
-    padding: 50px 50px 50px;
-    margin: auto;
-    top: 0%;
-    bottom: 10%;
-    /* grid-template-columns: repeat(4, 1fr); */
-  }
-  
-  /* General styling for gallery items */
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    justify-content: stretch;
-    display: inline-block;
- 
-  }
-  
-  /* Image container styling */
-  .gallery-item .image {
-    width: 400px;
-    height: 400px;
-    display: block;
-   
-  }
-  
-  /* Image styling and hover effect */
-  .gallery-item .image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 
-    cursor: pointer;
-     transition: transform 0.5s ease-in-out; 
-  } 
-  /* hover styling when you hover on picture */
-  .gallery-item:hover .image img {
-    transform: scale(1.1);
-  } 
-  
-  /* Text overlay styling */
-  .gallery-item .text {
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: #060606;
-    z-index: 1000;
-    transition: opacity 0.3s ease-in-out;
-    font-family: "SUSE", sans-serif;
-  }
-  /* button .text styling */
-  .button, .text{
-    background-color: #f8f9fa;
-  border: 1px solid #3c80c3;
-  /* border-radius: 4px; */
-  color: #3c4043;
-  cursor: pointer;
-  font-family: "SUSE", sans-serif;
-  font-size: 14px;
-  height: 36px;
-  line-height: 33px;
-  min-width: 54px;
-  padding: 0 16px;
-  text-align: center;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: pre;
-  }
-  .button:hover{
-    border-color: #dadce0;
-    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
-    color: #202124;
-  
-  }
- .button:focus{
-   border-color: #4285f4;
-  outline: none;
- }
-  /* Hover effect for text overlay */
-  .gallery-item:hover .text {
-    opacity: 1;
-    animation: move-down 0.3s linear;
-  }
-  /* Modal styling */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: #fff;
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 
-  }
-/* design for the modal */
-.modal-content{
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 24rem;
-    border-radius: 0.5rem;
   
-}
-/* modal appearance */
-.close-button{
-  float: center;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: red;
-}
-.close-button:hover{
-  background-color: #3c4043;
-}
-
-.col-col-2{
-  width: 100%;
-  display: flex;
-  border: 1px solid black;
-}
 .box{
   border: black;
 }
-.book{
-  position: relative;
-  width: 300px;
-  height:400px;
-  perspective: 1000px;
-}
-.cover, .page{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-}
-/* title for the header in the book */
-#title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: #0c0c0c;
-  font-family: "SUSE", sans-serif;
-}
+
 
   /* Animation for text movement */
   @keyframes move-down {
@@ -403,8 +251,6 @@ html,body {
       top: 50%;
     }
   }
- 
-
     /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     #navbar {
@@ -417,6 +263,39 @@ html,body {
         background-color: #000;
         transition: left 0.3s ease;
     }
+    /* #navbar.active{
+      left: 0;
+    }
+    .hamburger{
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1100;
+    }
+    .hamburger {
+        display: block;
+    } */
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    #navbar li {
+        margin-bottom: 20px;
+    }
+
+    #navbar a {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
     .grid-container{
       grid-template-columns: 1fr;
       height: 50%
@@ -425,5 +304,5 @@ html,body {
     transition: none !important;
     font-size: 10px;
    }
-}
+
  
