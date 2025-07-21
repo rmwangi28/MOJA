@@ -1,5 +1,5 @@
 .banner{
-        width: 100%;
+        width: 105%;
         padding: 10px;
         background: linear-gradient(270deg, #922529, #004600, #ffffff, #000000);
         background-size: 800% 800%;
@@ -26,6 +26,7 @@
             flex-wrap: wrap;
             gap: 100px 50px;
             padding: 100px 50px;
+            overflow: auto;
      
 }
 .container .custom-card {
@@ -88,6 +89,9 @@
         }
         .container .custom-card .custom-content p {
             color: #333;
+             font-family: "SUSE", sans-serif;
+            font-size: 14px;
+            padding: 10px;
         }
         .container .custom-card .custom-content a {
             position: relative;

@@ -1,7 +1,8 @@
 html,body {
-      position: relative;
-      height: 100%;
-       overflow-x: hidden;  /* x position hidden on browser*/
+    margin: 0;
+    padding: 0;
+
+       /* overflow-x: hidden;   x position hidden on browser*/
     }
     
     .header{
@@ -11,8 +12,7 @@ html,body {
         align-items: center;
     }
     .banner{
-      color: white;
-        width: 100%;
+        width: 105%;
         padding: 10px;
         background: linear-gradient(270deg, #922529, #004600, #ffffff, #000000);
         background-size: 800% 800%;
@@ -23,6 +23,7 @@ html,body {
         list-style-type: none;
         position: sticky;
         top: 0;
+        z-index: 1000;
 }
     /* Gradient animation keyframes */
 @keyframes gradientShift {
@@ -42,7 +43,7 @@ html,body {
     }
     #navbar {
         width: 100%;
-        padding: 30px; /* Reduced padding */
+        padding: 16px; /* Reduced padding */
         background: rgb(2, 2, 2);
         display: flex;
         justify-content: space-evenly;
@@ -170,9 +171,10 @@ html,body {
     .grid-container{
         position: relative;
         height: 100vh;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         grid-template-columns: 1fr 1fr 1fr; /* Two columns for a simple layout */
         padding: 19px;
         margin-left: 50px;
@@ -184,7 +186,7 @@ html,body {
         top:0;
         width: 230px;
         height:210px;
-        padding: 16px 16px;
+        padding: 10px 16px;
         position: relative;
         box-sizing: content-box;
         border-radius: 20px;
@@ -192,13 +194,11 @@ html,body {
         z-index: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         background-color: rgba(236, 230, 215, 0.84);
         transition: box-shadow 0.4s ease;
-       
-        
-       
+         
     }
     .card-1:hover,.card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
         box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
@@ -206,7 +206,7 @@ html,body {
     .card-1 p, .card-2 p, .card-3 p, .card-4 p, .card-5 p, .card-6 p {
         font-size: 11px;
         margin: 0;
-        padding: 1px;
+        /* padding: 0px; */
         line-height: 1.5;
         font-family: "Geist Mono", monospace;
         font-weight: 100;
@@ -228,7 +228,7 @@ html,body {
       font-family: "SUSE", sans-serif;
       text-align: center;
       margin: 10px;
-      padding: 37px;
+      padding: 10px;
       background: linear-gradient(to right, #ba0100, #006600 );
       background-clip: text;
       -webkit-background-clip: text;
